@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "yarn generate-css-types && vite",
+    "start": "yarn generate-css-types && vite --host",
     "build": "yarn generate-css-types && cross-env NODE_ENV=production tsc && vite build",
     "pretty": "prettier --check src",
     "lint": "yarn pretty && eslint --max-warnings 0 --ext ts,tsx,json src",
@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "@headlessui/react": "latest",
     "@vitejs/plugin-react": "^2.2.0",
     "preact": "^10.11.3",
     "unfetch": "^4.2.0",
